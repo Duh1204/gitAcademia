@@ -1,0 +1,10 @@
+*clonando
+git clone <endereco>
+
+*enviando para servidor
+git add . 
+git commit -m 'mensagem'
+git push
+
+*servidor - cliente
+git pull
