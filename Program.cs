@@ -1,26 +1,23 @@
 ﻿/*
+
 int num = 100;
-int cinquenta = 50;
-int sobra_cinquenta = Math.DivRem(num, cinquenta, out sobra_cinquenta);
+int sobra_cinquenta = num/50;
 
-num = num - cinquenta * sobra_cinquenta;
-int dez = 10;
-int sobra_dez = Math.DivRem(num, dez, out sobra_dez);
+num = num % 50;
+int sobra_dez = num/10;
 
-num = num - dez * sobra_dez;
-int cinco = 5;
-int sobra_cinco = Math.DivRem(num, cinco, out sobra_cinco);
+num = num % 10;
+int sobra_cinco = num / 5;
 
-num = num - cinco * sobra_cinco;
-int um = 1;
-int sobra_um = Math.DivRem(num, um, out sobra_um);
+num = num % 5;
+int sobra_um = num / 1;
 
-Console.WriteLine(sobra_cinquenta);
-Console.WriteLine(sobra_dez);
-Console.WriteLine(sobra_cinco);
-Console.WriteLine(sobra_um);
+Console.WriteLine("Notas de cinquenta: " + sobra_cinquenta);
+Console.WriteLine("Notas de dez: " + sobra_dez);
+Console.WriteLine("Notas de cinco: " + sobra_cinco);
+Console.WriteLine("Notas de um: " + sobra_um);
+
 */
-
 /*
 9) Uma loja vende seus produtos no sistema de entrada mais duas prestações, sendo a entrada maior 
 do que ou igual às duas prestações, que devem ser iguais, inteiras e as maiores possíveis. 
@@ -31,9 +28,10 @@ da entrada e das duas prestações, de acordo com as regras acima.
 Observe que uma justificativa para a adoção desta regra é que ela facilita a confecção e o 
 conseqüente pagamento dos boletos das duas prestações.
 
+Solução Inicial(1)
 
-double valor = 412.75;
-int prest1 = Convert.ToInt32(valor/3);
+int prest1 = Convert.ToInt32(Math.Floor(valor/3));
+Console.WriteLine(prest1);
 int prest2 = prest1;
 double entrada = (((valor / 3) - prest1)*3) + prest1;
 Console.WriteLine("Entrada: " + entrada);
@@ -42,7 +40,19 @@ Console.WriteLine("Segunda Prestação: " + prest2);
 Console.WriteLine(prest1 + prest2 + entrada);
 
 
-*/
+/*
+
+Solução Mais simples(2)
+
+double valor = 150;
+double resto = valor % 3;
+double prest1 = (valor - resto) / 3;
+double prest2 = prest1;
+double entrada = prest1 + resto;
+Console.WriteLine(entrada);
+Console.WriteLine(prest1);
+Console.WriteLine(prest2);
+
 
 /*
 8) Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
