@@ -1,4 +1,75 @@
 ﻿/*
+11) Escreva um algoritmo para ler o número de eleitores de um município, o número de votos brancos, nulos e válidos. Calcule e escreva o percentual que cada um 
+representa em relação ao total de eleitores.
+
+double total_eleitores, votos, votos_brancos, votos_nulos;
+total_eleitores = 150;
+votos = 77;
+votos_brancos = 26;
+votos_nulos = 47;
+
+Console.WriteLine("Votos: " + Convert.ToInt16(votos/total_eleitores*100));
+Console.WriteLine("Votos brancos: " + Convert.ToInt16(votos_brancos / total_eleitores * 100));
+Console.WriteLine("Votos nulos: " + Convert.ToInt16(votos_nulos / total_eleitores * 100));
+*/
+
+/*
+12) Um motorista de taxi deseja calcular o rendimento de seu carro na praça. Sabendo-se que o preço do combustível é de R$6,90, escreva um algoritmo para ler a 
+marcação do odômetro (marcador de quilometragem) no início do dia, a marcação no final do dia, o número de litros de combustível gasto e o valor total (R$) recebido 
+dos passageiros. Calcule e escreva a média do consumo em Km/l e o lucro líquido do dia.
+
+Fórmulas: Total quilometragem =  marcação odômetro final do dia - marcação odômetro inicio do dia 
+
+Média do consumo = Total quilometragem/ quantidade de combustível gasto
+
+Lucro do dia = Valor total recebido - (quantidade de combustível gasto * 6,90)
+
+
+double preco_comb = 6.90;
+
+double inicial_odometro;
+double final_odometro;
+double comb_gasto;
+double pagamento;
+
+Console.WriteLine("Escreva a marcação de km do odômetro antes da corrida: ");
+inicial_odometro = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Escreva a marcação de km do odômetro após a corrida: ");
+final_odometro = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Escreva quantos litros foram gastos");
+comb_gasto = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Escreva quantos foi pago pelo passageiro");
+pagamento = Convert.ToDouble(Console.ReadLine());
+
+double quilometragem = final_odometro - inicial_odometro;
+double km_per_l = quilometragem / comb_gasto;
+double rendimento = pagamento - (comb_gasto * preco_comb);
+
+Console.WriteLine("Quilometragem: " + quilometragem);
+Console.WriteLine("Km/l: " + km_per_l);
+Console.WriteLine("Rendimento: " + rendimento);
+*/
+/*
+13) Uma loja vende bicicletas com um acréscimo de 50% sobre o preço de custo. Ela paga a cada vendedor 2 salários mínimos mensais, mais uma comissão de 15% sobre o 
+preço de custo de cada bicicleta vendida. Desenvolva um algoritmo que leia o valor do salário mínimo, o preço de custo de cada bicicleta e o número de bicicletas 
+vendidas pelo vendedor, calcule e mostre: o salário do empregado
+
+
+double salario_min = 900;
+double preco;
+int bicicletas_vendidas;
+
+Console.WriteLine("Quantas bicicletas foram vendidas? ");
+bicicletas_vendidas = Convert.ToInt16(Console.ReadLine());
+
+Console.WriteLine("Qual o preço da bicicleta? ");
+preco = ((Convert.ToDouble(Console.ReadLine())/2)*0.15)*bicicletas_vendidas + salario_min;
+
+Console.WriteLine(preco);
+
+*/
+
+/*
 
 int num = 100;
 int sobra_cinquenta = num/50;
